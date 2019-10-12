@@ -67,7 +67,8 @@ class EmployeeController extends Controller
      */
     public function edit($id)
     {
-        //
+        $t_pegawai = DB::table('employees')->where('employees_id', $id)->get();
+        return view('pegawai/edit', ['pegawai'=> $t_pegawai]);
     }
 
     /**
@@ -77,9 +78,18 @@ class EmployeeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        //update data dari halaman "edit" ke database
+        DB::table('employees')->where('employees_id', $request->id)->update([
+            'employees_name'=>$request->nama,
+            'employees_jabatan'=>$request->jabatan,
+            'employees_umur'=>$request->umur,
+            'employees_alamat'=>$request->alamat
+        ]);
+
+        //setelah update dialihkan kembali ke halaman pegawai
+        return redirect('/pegawai')->with('status', 'Perubahan Sukses!');
     }
 
     /**

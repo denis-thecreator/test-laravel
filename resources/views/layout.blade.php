@@ -50,12 +50,13 @@
                             {{-- Bagian Title Konten --}}
                             <h3>@yield('title')</h3>
                             <hr>
-                            
-                            {{-- Bagian Isi Konten --}}
-                            @yield('konten')
 
                             {{-- Bagian Isi Pesan --}}
                             @yield('msg')
+
+                            {{-- Bagian Isi Konten --}}
+                            @yield('konten')
+                            
                         </div>
                     </div>
                 </div>
