@@ -3,6 +3,7 @@
 @section('title', 'Data Pegawai')
 
 @section('konten')
+    <a href="{{url('/pegawai/add')}}" class="btn btn-link" style="padding-left:0">+ Tambah Data Pegawai</a>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -24,7 +25,7 @@
                     <td>{{$p->employees_alamat}}</td>
                     <td>
                         <a href="/pegawai/edit/{{$p->employees_id}}" class="badge badge-warning">edit</a>
-                        <a href="/pegawai/delete/{{$p->employees_id}}" class="badge badge-danger">danger</a>
+                        <a href="{{url('/pegawai/delete/'.$p->employees_id)}}" class="badge badge-danger">delete</a>
                     </td>
                 </tr>
             @endforeach
