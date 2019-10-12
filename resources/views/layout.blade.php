@@ -53,6 +53,9 @@
                             
                             {{-- Bagian Isi Konten --}}
                             @yield('konten')
+
+                            {{-- Bagian Isi Pesan --}}
+                            @yield('msg')
                         </div>
                     </div>
                 </div>

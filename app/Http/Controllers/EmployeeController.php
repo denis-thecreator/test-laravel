@@ -36,7 +36,16 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //insert data dari halaman "add" ke database
+        DB::table('employees')->insert([
+            'employees_name' => $request->nama,
+            'employees_jabatan' => $request->jabatan,
+            'employees_umur' => $request->umur,
+            'employees_alamat' => $request->alamat
+        ]);
+
+        //mengalihkan ke halaman pegawai
+        return redirect('/pegawai')->with('status', 'Data berhasil ditambahkan!');
     }
 
     /**

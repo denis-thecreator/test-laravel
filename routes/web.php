@@ -27,4 +27,4 @@ Route::get('/blog/kontak', 'BlogController@kontak');
 //Test CRUD menggunakan Query Builder
 Route::get('/pegawai', 'EmployeeController@index');
 Route::get('/pegawai/add', 'EmployeeController@create');
-Route::get('/pegawai/store', 'EmployeeController@store');
+Route::post('/pegawai/store', 'EmployeeController@store');
