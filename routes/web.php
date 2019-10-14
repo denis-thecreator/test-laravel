@@ -30,3 +30,4 @@ Route::get('/pegawai/add', 'EmployeeController@create');
 Route::post('/pegawai/store', 'EmployeeController@store');
 Route::get('/pegawai/edit/{id}', 'EmployeeController@edit');
 Route::post('/pegawai/update', 'EmployeeController@update');
+Route::get('/pegawai/delete/{id}', 'EmployeeController@destroy');

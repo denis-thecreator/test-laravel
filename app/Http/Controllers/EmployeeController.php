@@ -100,6 +100,9 @@ class EmployeeController extends Controller
      */
     public function destroy($id)
     {
-        //
+        //menghapus data pegawai berdasar id yg dipilih
+        DB::table('employees')->where('employees_id', $id)->delete();
+
+        return redirect('/pegawai')->with('status', 'Sukses Hapus Data');
     }
 }
