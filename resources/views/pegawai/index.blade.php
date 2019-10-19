@@ -3,7 +3,15 @@
 @section('title', 'Data Pegawai')
 
 @section('konten')
-    <a href="{{url('/pegawai/add')}}" class="btn btn-link" style="padding-left:0">+ Tambah Data Pegawai</a>
+    <a href="{{url('/pegawai/add')}}" class="btn btn-link" style="padding-left:0">+ Tambah Data Pegawai</a><br>
+    <form action="/pegawai/cari" method="GET">
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+                <button type="submit" class="btn btn-dark" id="button-addon-1"><i class="fas fa-search"></i></button>
+            </div>
+            <input type="text" name="cari" class="form-control" placeholder="Cari Pegawai.." aria-describedby="button-addon-1" value="{{old('cari')}}">
+        </div>
+    </form>
     <table class="table table-bordered">
         <thead>
             <tr>
@@ -31,6 +39,8 @@
             @endforeach
         </tbody>
     </table>
+
+    {{$pegawai->links()}}
 @endsection
 
 @section('msg')

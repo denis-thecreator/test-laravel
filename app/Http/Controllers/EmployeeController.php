@@ -14,7 +14,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        $t_pegawai = DB::table('employees')->get();
+        $t_pegawai = DB::table('employees')->paginate(10);
         return view('pegawai/index', ['pegawai' => $t_pegawai]);
     }
 
@@ -104,5 +104,16 @@ class EmployeeController extends Controller
         DB::table('employees')->where('employees_id', $id)->delete();
 
         return redirect('/pegawai')->with('status', 'Sukses Hapus Data');
+    }
+
+    public function cari(Request $request)
+    {
+        $cari = $request->cari;
+
+        $pegawai = DB::table('employees')
+                   ->where('employees_name', 'like', "%".$cari."%")
+                   ->paginate();
+
+        return view('pegawai/index', ['pegawai'=>$pegawai]);
     }
 }
