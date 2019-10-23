@@ -32,3 +32,5 @@ Route::get('/pegawai/edit/{id}', 'EmployeeController@edit');
 Route::post('/pegawai/update', 'EmployeeController@update');
 Route::get('/pegawai/delete/{id}', 'EmployeeController@destroy');
 Route::get('/pegawai/cari', 'EmployeeController@cari');
+
+//route baru
