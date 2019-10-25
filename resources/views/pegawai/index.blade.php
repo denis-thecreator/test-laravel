@@ -12,7 +12,7 @@
             <input type="text" name="cari" class="form-control" placeholder="Cari Pegawai.." aria-describedby="button-addon-1" value="{{old('cari')}}">
         </div>
     </form>
-    <div class="table-responsive">    
+    <div class="table-responsive"> 
         <table class="table table-bordered">
             <thead>
                 <tr>

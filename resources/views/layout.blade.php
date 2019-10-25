@@ -39,7 +39,10 @@
             </li>
             <li class="nav-item">
                     <a class="nav-link" href="{{ url('/pegawai') }}">Pegawai</a>
-                </li>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ url('/member') }}">Member</a>
+        </li>
             </ul>
         </div>
         </nav>

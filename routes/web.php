@@ -33,4 +33,5 @@ Route::post('/pegawai/update', 'EmployeeController@update');
 Route::get('/pegawai/delete/{id}', 'EmployeeController@destroy');
 Route::get('/pegawai/cari', 'EmployeeController@cari');
 
-//route baru
+//Test CRUD menggunakan Eloquent
+Route::get('/member', 'MemberController@index');
