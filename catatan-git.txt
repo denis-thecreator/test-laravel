@@ -1,1 +1,5 @@
 git log --all --decorate --oneline --graph
+
+//kalau db-seed error, pakai cara ini
+=> composer dump-autoload
+=> php artisan db:seed --class=..
