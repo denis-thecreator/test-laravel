@@ -14,4 +14,13 @@ class MemberController extends Controller
         return view('member/index', ['member' => $member]);
     }
 
+    public function tambah()
+    {
+        return view('member/tambah');
+    }
+
+    public function store(Request $request)
+    {
+        
+    }
 }
