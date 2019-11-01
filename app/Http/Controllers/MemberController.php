@@ -21,6 +21,22 @@ class MemberController extends Controller
 
     public function store(Request $request)
     {
-        
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        Member::create([
+            'nama' => $request->nama,
+            'alamat' => $request->alamat
+        ]);
+
+        return redirect('member');
+    }
+
+    public function edit($id)
+    {
+        $member = Member::find($id);
+        return view('member/edit', ['member' => $member]);
     }
 }

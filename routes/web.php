@@ -36,4 +36,5 @@ Route::get('/pegawai/cari', 'EmployeeController@cari');
 //Test CRUD menggunakan Eloquent
 Route::get('/member', 'MemberController@index');
 Route::get('/member/tambah', 'MemberController@tambah');
-Route::get('/member/store', 'MemberController@store');
+Route::post('/member/store', 'MemberController@store');
+Route::get('/member/edit/{id}', 'MemberController@edit');
