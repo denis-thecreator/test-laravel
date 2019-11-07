@@ -21,6 +21,10 @@
                         <td>
                             <a href="{{url('/member/edit/'.$m->id)}}" class="badge badge-warning">edit</a>
                             <a href="{{url('/member/delete/'.$m->id)}}" class="badge badge-danger">delete</a>
+<<<<<<< HEAD
+=======
+                            <a href="{{url('/member/hapus/'.$m->id)}}" class="badge badge-white">hapus</a>
+>>>>>>> 1329418fd3d824109b8b0eaa338daeacb1c06dfa
                         </td>
                     </tr>
                 @endforeach
