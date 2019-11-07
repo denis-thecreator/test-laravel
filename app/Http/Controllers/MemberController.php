@@ -51,20 +51,14 @@ class MemberController extends Controller
         $member->nama = $request->nama;
         $member->alamat = $request->alamat;
         $member->save();
-<<<<<<< HEAD
-        return redirect('/member');
-=======
+
         return redirect('member');
->>>>>>> 1329418fd3d824109b8b0eaa338daeacb1c06dfa
     }
 
     public function delete($id)
     {
         $member = Member::find($id);
         $member->delete();
-<<<<<<< HEAD
-        return redirect('/member');
-=======
         return redirect('member');
     }
 
@@ -72,6 +66,5 @@ class MemberController extends Controller
     {
         Member::destroy($member->id);
         return redirect('member');
->>>>>>> 1329418fd3d824109b8b0eaa338daeacb1c06dfa
     }
 }
