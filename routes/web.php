@@ -38,3 +38,5 @@ Route::get('/member', 'MemberController@index');
 Route::get('/member/tambah', 'MemberController@tambah');
 Route::post('/member/store', 'MemberController@store');
 Route::get('/member/edit/{id}', 'MemberController@edit');
+Route::put('/member/update/{id}', 'MemberController@update');
+Route::get('/member/delete/{id}', 'MemberController@delete');

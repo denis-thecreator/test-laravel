@@ -39,4 +39,25 @@ class MemberController extends Controller
         $member = Member::find($id);
         return view('member/edit', ['member' => $member]);
     }
+
+    public function update($id, Request $request)
+    {
+        $this->validate($request, [
+            'nama' => 'required',
+            'alamat' => 'required'
+        ]);
+
+        $member = Member::find($id);
+        $member->nama = $request->nama;
+        $member->alamat = $request->alamat;
+        $member->save();
+        return redirect('/member');
+    }
+
+    public function delete($id)
+    {
+        $member = Member::find($id);
+        $member->delete();
+        return redirect('/member');
+    }
 }

@@ -19,8 +19,8 @@
                         <td>{{$m->nama}}</td>
                         <td>{{$m->alamat}}</td>
                         <td>
-                            <a href="{{url('/member/edit'.$m->id)}}" class="badge badge-warning">edit</a>
-                            <a href="{{url('/member/delete'.$m->id)}}" class="badge badge-danger">delete</a>
+                            <a href="{{url('/member/edit/'.$m->id)}}" class="badge badge-warning">edit</a>
+                            <a href="{{url('/member/delete/'.$m->id)}}" class="badge badge-danger">delete</a>
                         </td>
                     </tr>
                 @endforeach
