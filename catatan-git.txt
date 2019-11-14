@@ -3,3 +3,17 @@ git log --all --decorate --oneline --graph
 //kalau db-seed error, pakai cara ini
 => composer dump-autoload
 => php artisan db:seed --class=..
+
+_________________________________________________________________
+
+catatan laravel
+
+[MIGRATION]
+=>database -> jamak
+=>model -> single
+
+*membuat table pake migration:
+ - php artisan make:migration create_students
+   ex: students adalah nama table nya.
+
+
