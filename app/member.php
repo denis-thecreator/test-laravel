@@ -9,5 +9,4 @@ class Member extends Model
 {
     use SoftDeletes;
     protected $fillable = ['nama', 'alamat'];
-    protected $dates = ['deleted_at'];
 }

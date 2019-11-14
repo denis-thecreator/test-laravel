@@ -61,10 +61,4 @@ class MemberController extends Controller
         $member->delete();
         return redirect('member');
     }
-
-    public function destroy(Member $member)
-    {
-        Member::destroy($member->id);
-        return redirect('member');
-    }
 }
