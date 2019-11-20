@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Customer extends Model
 {
-    public function phones()
+    public function phone()
     {
-        return $this->hasOne('App\Phone', 'id');
+        return $this->hasOne('App\Phone', 'customers_id');
     }
 }

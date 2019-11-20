@@ -15,7 +15,7 @@
                     <tr>
                         <td>{{$loop->iteration}}</td>
                         <td>{{$c->nama}}</td>
-                        <td>{{$c->nomor_telpon}}</td>
+                        <td>{{$c->phone->nomor_telpon}}</td>
                     </tr>
                 @endforeach
             </tbody>
