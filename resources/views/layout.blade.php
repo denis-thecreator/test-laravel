@@ -28,21 +28,24 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/blog') }}">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/blog/tentang') }}">Tentang</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/blog/kontak') }}">Kontak</a>
-            </li>
-            <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/pegawai') }}">Pegawai</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url('/member') }}">Member</a>
-        </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/blog') }}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/blog/tentang') }}">Tentang</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/blog/kontak') }}">Kontak</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/pegawai') }}">Pegawai</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ url('/member') }}">Member</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="{{ url('/customers') }}">Customers</a>
+                </li>
             </ul>
         </div>
         </nav>

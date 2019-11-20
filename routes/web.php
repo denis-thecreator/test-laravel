@@ -43,3 +43,6 @@ Route::get('/member/delete/{id}', 'MemberController@delete');
 
 //Test Relasi OneToOne
 Route::get('/customers', 'CustomersController@index');
+
+//Test Relasi OneToMany
+Route::get('articles', 'ArticlesController@index');
