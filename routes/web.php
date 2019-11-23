@@ -46,3 +46,6 @@ Route::get('/customers', 'CustomersController@index');
 
 //Test Relasi OneToMany
 Route::get('articles', 'ArticlesController@index');
+
+//Test Relasi ManyToMany
+Route::get('/rewards', 'RewardsController@index');
