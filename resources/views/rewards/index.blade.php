@@ -12,18 +12,23 @@
                 <th>Jumlah</th>
             </thead>
             <tbody>
-                @foreach ($customer as $r)
+                @foreach ($customer as $c)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$r->nama}}</td>
+                        <td>{{$c->nama}}</td>
                         <td>
-                            &nbsp;
+                            <ul>
+                                @foreach ($c->rewards as $r)
+                                    <li>{{$r->nama_hadiah}}</li>
+                                @endforeach
+                            </ul>
                         </td>
-                        <td>&nbsp;</td>
+                        <td>{{$c->rewards->count()}}</td>
                     </tr>
                 @endforeach
             </tbody>
         </table>
+        {{$customer->links()}}
     </div>
     
 @endsection

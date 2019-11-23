@@ -17,3 +17,6 @@ catatan laravel
    ex: students adalah nama table nya.
 
 
+*membuat relasi many to many
+ - nama pivot table -> singular
+ - nama foreign key -> singular

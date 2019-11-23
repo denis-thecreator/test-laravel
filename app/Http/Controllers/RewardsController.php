@@ -15,7 +15,7 @@ class RewardsController extends Controller
      */
     public function index()
     {
-        $reward = Customer::all();
+        $customer = Customer::paginate(10);
         return view('rewards/index', ['customer' => $customer]);
     }
 

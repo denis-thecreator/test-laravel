@@ -37,14 +37,15 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/blog/kontak') }}">Kontak</a>
                 </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/pegawai') }}">Pegawai</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/member') }}">Member</a>
-                </li>
-                <li class="nav-item">
-                        <a class="nav-link" href="{{ url('/customers') }}">Customers</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Testing Data</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a href="{{ url('/pegawai')}}" class="dropdown-item">Pegawai</a>
+                        <a class="dropdown-item" href="{{ url('/member') }}">Member</a>
+                        <a class="dropdown-item" href="{{ url('/customers') }}">Customers [OneToOne]</a>
+                        <a class="dropdown-item" href="{{ url('/articles') }}">Artikel [OneToMany]</a>
+                        <a class="dropdown-item" href="{{ url('/rewards') }}">Hadiah [ManyToMany]</a>
+                    </div>
                 </li>
             </ul>
         </div>

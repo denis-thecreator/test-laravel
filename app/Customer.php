@@ -11,7 +11,7 @@ class Customer extends Model
         return $this->hasOne('App\Phone', 'customers_id');
     }
 
-    public function reward()
+    public function rewards()
     {
         return $this->belongsToMany('App\Reward');
     }
