@@ -51,4 +51,9 @@ Route::get('articles', 'ArticlesController@index');
 Auth::routes();
 Route::get('/rewards', 'RewardsController@index');
 
+//Belajar Enkripsi Laravel
+Route::get('/enkripsi', 'JohnController@enkripsi');
+Route::get('/data', 'JohnController@data');
+Route::get('/data/{data_rahasia}', 'JohnController@data_proses');
+
 Route::get('/home', 'HomeController@index')->name('home');
