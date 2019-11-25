@@ -48,7 +48,7 @@ Route::get('/customers', 'CustomersController@index');
 Route::get('articles', 'ArticlesController@index');
 
 //Test Relasi ManyToMany
-Route::get('/rewards', 'RewardsController@index');
 Auth::routes();
+Route::get('/rewards', 'RewardsController@index');
 
 Route::get('/home', 'HomeController@index')->name('home');
