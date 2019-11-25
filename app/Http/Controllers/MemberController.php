@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Member;
+use Illuminate\Support\Facades\Crypt;
 
 class MemberController extends Controller
 {
