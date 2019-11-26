@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Crypt;
+use Illuminate\Support\Facades\Hash;
 
 class JohnController extends Controller
 {
@@ -35,5 +36,11 @@ class JohnController extends Controller
         echo "Nama :".$data['nama'];
         echo "<br>";
         echo "Pekerjaan :".$data['pekerjaan'];
+    }
+
+    public function hash()
+    {
+        $my_hash = Hash::make('Halo Johny');
+        echo $my_hash;
     }
 }

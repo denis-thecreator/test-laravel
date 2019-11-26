@@ -57,3 +57,6 @@ Route::get('/data', 'JohnController@data');
 Route::get('/data/{data_rahasia}', 'JohnController@data_proses');
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//belajar hash
+Route::get('/hash', 'JohnController@hash');
