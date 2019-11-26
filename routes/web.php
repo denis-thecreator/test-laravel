@@ -60,3 +60,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //belajar hash
 Route::get('/hash', 'JohnController@hash');
+
+//belajar upload files
+Route::get('/upload', 'UploadController@upload');
+Route::post('/upload/proses', 'UploadController@upload_proses');
