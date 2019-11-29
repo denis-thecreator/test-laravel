@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCustomerRewardTable extends Migration
+class CreateAttachmentsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCustomerRewardTable extends Migration
      */
     public function up()
     {
-        Schema::create('customer_reward', function (Blueprint $table) {
+        Schema::create('attachments', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer('customer_id');
-            $table->integer('reward_id');
+            $table->string('file');
+            $table->string('keterangan');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateCustomerRewardTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer_reward');
+        Schema::dropIfExists('attachments');
     }
 }

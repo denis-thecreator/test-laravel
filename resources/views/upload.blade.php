@@ -26,4 +26,24 @@
             <input type="submit" class="btn btn-primary" value="SUBMIT">
         </div>
     </form>
+
+    <h4>Data</h4>
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>File</th>
+                <th>Keterangan</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach ($attachment as $a)
+                <tr>
+                    <td><img src="{{url('data/'.$a->file)}}" width="150px"></td>
+                    <td>{{$a->keterangan}}</td>
+                    <td><a href="{{url('upload/hapus/'.$a->id)}}" class="badge badge-danger">hapus</a></td>
+                </tr>
+            @endforeach
+        </tbody>
+    </table>
 @endsection
