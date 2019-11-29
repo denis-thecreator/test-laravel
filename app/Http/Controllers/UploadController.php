@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Attachment;
+use File;
 
 class UploadController extends Controller
 {
@@ -17,7 +18,7 @@ class UploadController extends Controller
     {
         //Membuat validasi
         $this->validate($request, [
-            'file' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'file' => 'required|file|image|mimes:jpeg,png,jpg,svg|max:2048',
             'keterangan' => 'required'
         ]);
 
@@ -59,5 +60,15 @@ class UploadController extends Controller
 
         return redirect()->back();
         
+    }
+
+    public function hapus($id)
+    {
+        $attachment = Attachment::where('id', $id)->first();
+        File::delete('data/'.$attachment->file);
+
+        Attachment::where('id', $id)->delete();
+
+        return redirect()->back();
     }
 }

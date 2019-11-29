@@ -41,7 +41,7 @@
                 <tr>
                     <td><img src="{{url('data/'.$a->file)}}" width="150px"></td>
                     <td>{{$a->keterangan}}</td>
-                    <td><a href="{{url('upload/hapus/'.$a->id)}}" class="badge badge-danger">hapus</a></td>
+                    <td><a href="{{url('/upload/hapus/'.$a->id)}}" class="badge badge-danger">hapus</a></td>
                 </tr>
             @endforeach
         </tbody>

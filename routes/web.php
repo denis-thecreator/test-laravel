@@ -64,3 +64,4 @@ Route::get('/hash', 'JohnController@hash');
 //belajar upload files
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@upload_proses');
+Route::get('/upload/hapus/{id}', 'UploadController@hapus');
