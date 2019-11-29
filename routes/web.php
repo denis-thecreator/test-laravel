@@ -65,3 +65,8 @@ Route::get('/hash', 'JohnController@hash');
 Route::get('/upload', 'UploadController@upload');
 Route::post('/upload/proses', 'UploadController@upload_proses');
 Route::get('/upload/hapus/{id}', 'UploadController@hapus');
+
+//belajar membuat session
+Route::get('/session/tampil', 'JohnController@tampilkanSession');
+Route::get('/session/buat', 'JohnController@buatSession');
+Route::get('/session/hapus', 'JohnController@hapusSession');

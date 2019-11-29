@@ -43,4 +43,28 @@ class JohnController extends Controller
         $my_hash = Hash::make('Halo Johny');
         echo $my_hash;
     }
+
+    public function tampilkanSession(Request $request)
+    {
+        if($request->session()->has('nama'))
+        {
+            echo $request->session()->get('nama');
+        }
+        else
+        {
+            echo 'Tidak ada data dalam session';
+        }
+    }
+
+    public function buatSession(Request $request)
+    {
+        $request->session()->put('nama', 'Denistian Diki M');
+        echo "Data telah ditambahkan ke session";
+    }
+
+    public function hapusSession(Request $request)
+    {
+        $request->session()->forget('nama');
+        echo "Data telah dihapus dari session";
+    }
 }
