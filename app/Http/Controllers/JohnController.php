@@ -8,6 +8,17 @@ use Illuminate\Support\Facades\Hash;
 
 class JohnController extends Controller
 {
+    public function indux($nama)
+    {
+        if ($nama == 'admin') {
+            return abort(403, 'Anda tidak punya akses karna anda seorang kapiten');
+        }elseif($nama =='joni'){
+            return 'Halo '.$nama;
+        }else{
+            return abort(404);
+        }
+    }
+
     public function enkripsi()
     {
         $encrypted = Crypt::encryptString('Belajar menggunakan Encrypt Laravel');
