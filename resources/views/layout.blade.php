@@ -45,6 +45,7 @@
                         <a class="dropdown-item" href="{{ url('/customers') }}">Customers [OneToOne]</a>
                         <a class="dropdown-item" href="{{ url('/articles') }}">Artikel [OneToMany]</a>
                         <a class="dropdown-item" href="{{ url('/rewards') }}">Hadiah [ManyToMany]</a>
+                        <a class="dropdown-item" href="{{ url('/pesan') }}">Test Notif Session</a>
                     </div>
                 </li>
             </ul>
