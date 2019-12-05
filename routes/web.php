@@ -70,3 +70,9 @@ Route::get('/upload/hapus/{id}', 'UploadController@hapus');
 Route::get('/session/tampil', 'JohnController@tampilkanSession');
 Route::get('/session/buat', 'JohnController@buatSession');
 Route::get('/session/hapus', 'JohnController@hapusSession');
+
+//belajar membuat notif session
+Route::get('/pesan', 'NotifController@index');
+Route::get('/pesan/sukses', 'NotifController@sukses');
+Route::get('/pesan/peringatan', 'NotifController@peringatan');
+Route::get('/pesan/gagal', 'NotifController@gagal');
