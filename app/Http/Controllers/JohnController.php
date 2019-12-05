@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Hash;
 
 class JohnController extends Controller
 {
-    public function indux($nama)
+    public function index($nama)
     {
         if ($nama == 'admin') {
             return abort(403, 'Anda tidak punya akses karna anda seorang kapiten');
