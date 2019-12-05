@@ -40,6 +40,7 @@ Route::post('/member/store', 'MemberController@store');
 Route::get('/member/edit/{id}', 'MemberController@edit');
 Route::put('/member/update/{id}', 'MemberController@update');
 Route::get('/member/delete/{id}', 'MemberController@delete');
+Route::get('/member/cetak_pdf', 'MemberController@cetak_pdf');
 
 //Test Relasi OneToOne
 Route::get('/customers', 'CustomersController@index');

@@ -4,6 +4,8 @@
 
 @section('konten')
     <a href="{{url('/member/tambah')}}" class="btn btn-primary mb-3">Input Member Baru</a>
+    <a href="{{url('/member/cetak_pdf')}}" class="btn btn-link mb-3" target="_blank">Export PDF</a>
+
     <div class="table-responsive">
         <table class="table table-bordered table-hover table-striped">
             <thead>

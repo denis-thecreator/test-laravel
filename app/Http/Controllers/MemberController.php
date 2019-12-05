@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Member;
 use Illuminate\Support\Facades\Crypt;
+use PDF;
 
 class MemberController extends Controller
 {
@@ -61,5 +62,13 @@ class MemberController extends Controller
         $member = Member::find($id);
         $member->delete();
         return redirect('member');
+    }
+
+    public function cetak_pdf()
+    {
+        $member = Member::all();
+
+        $pdf = PDF::loadview('member/member_pdf', ['member'=>$member]);
+        return $pdf->stream();
     }
 }
