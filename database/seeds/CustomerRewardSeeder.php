@@ -15,9 +15,9 @@ class CustomerRewardSeeder extends Seeder
         $faker = Faker::create('id_ID');
 
         for ($i=1; $i <= 50; $i++) { 
-            DB::table('customer_rewards')->insert([
-                'customers_id' => $faker->numberBetween($min=1, $max=50),
-                'rewards_id' => $faker->numberBetween($min=1, $max=20)
+            DB::table('customer_reward')->insert([
+                'customer_id' => $faker->numberBetween($min=1, $max=50),
+                'reward_id' => $faker->numberBetween($min=1, $max=20)
             ]);
         }
     }
